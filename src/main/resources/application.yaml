@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: journey-journal
+
+
+
