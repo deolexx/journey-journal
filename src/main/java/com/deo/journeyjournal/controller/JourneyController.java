@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RequiredArgsConstructor
-@Tag(name = "Journey API")
+@Tag(name = "Journey API", description = "API for working with journeys")
 @RestController
 @RequestMapping("api/v1/journeys")
 public class JourneyController {
