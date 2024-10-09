@@ -33,7 +33,11 @@ repositories {
 dependencies {
     implementation 'org.springdoc:springdoc-openapi-starter-webflux-ui:2.3.0'
     implementation 'org.springframework.boot:spring-boot-starter-webflux:3.3.1'
+    implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc:3.3.1'
+    runtimeOnly 'io.r2dbc:r2dbc-postgresql:0.8.13.RELEASE'
+    runtimeOnly 'org.postgresql:r2dbc-postgresql:1.0.4.RELEASE'
     compileOnly 'org.projectlombok:lombok:1.18.30'
+    compileOnly 'com.google.api-client:google-api-client:1.32.1'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

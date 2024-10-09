@@ -1,10 +1,10 @@
 package com.deo.journeyjournal.service;
 
-import com.deo.journeyjournal.dto.Journey;
+import com.deo.journeyjournal.dto.JourneyDto;
 
 public interface JourneyService {
 
-  Journey createJourney(Journey journey);
+  JourneyDto createJourney(JourneyDto journey);
 
-  Journey findJourneyById(int id);
+  JourneyDto findJourneyById(int id);
 }
