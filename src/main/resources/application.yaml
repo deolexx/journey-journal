@@ -4,3 +4,8 @@ spring:
 
 
 
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5434/journey-journal
+    username: postgres
+    password: postgres
