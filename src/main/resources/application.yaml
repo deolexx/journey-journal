@@ -1,11 +1,36 @@
 spring:
   application:
     name: journey-journal
-
-
+  flyway:
+    enabled: true
+    user: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    url: jdbc:postgresql://${DB_HOST}/journey_journal
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${CLIENT_ID}
+            client-secret: ${CLIENT_SECRET}
 
 
   r2dbc:
-    url: r2dbc:postgresql://localhost:5434/journey-journal
-    username: postgres
-    password: postgres
+    url: r2dbc:postgresql://${DB_HOST}/journey_journal
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    open-in-view: false
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+  main:
+    web-application-type: reactive
+
+logging:
+  level:
+    web: debug
+springdoc:
+  api-docs:
+    enabled: true
